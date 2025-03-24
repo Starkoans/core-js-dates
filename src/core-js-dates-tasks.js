@@ -72,11 +72,11 @@ function getDayName(date) {
  */
 function getNextFriday(date) {
   const d = new Date(date);
-  let diff = 5 - d.getDay();
+  let diff = 5 - d.getUTCDay();
   if (diff <= 0) {
     diff += 7;
   }
-  d.setDate(d.getDate() + diff);
+  d.setUTCDate(d.getUTCDate() + diff);
   return d;
 }
 
